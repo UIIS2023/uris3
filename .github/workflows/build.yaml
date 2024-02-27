@@ -43,7 +43,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell 
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"UIIS2023_uris3" /o:"uris3" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"UIIS2023_uris3" /o:"uiis2023" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet publish AuctionMS/AuctionMS.sln -c Debug -o out
           dotnet publish Logger/Logger/Logger.sln -c Debug -o out
           dotnet build
